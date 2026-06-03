@@ -78,5 +78,4 @@ WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
 select * from users where province = "กรุงเทพมหานคร" AND firstname LIKE "สม%"
 -----------------------------------------------------------------------------
 OR operator : หรือ 
-
-ถึงตรงนี้ : https://www.w3schools.com/sql/sql_or.asp
+ใช้ร่วมกับ where มี 1 เงื่อนหรือมากกว่า 1 ก็ได้ เชื่อมด้วย OR
