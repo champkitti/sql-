@@ -68,7 +68,7 @@ WHERE condition1 AND condition2 AND condition3 ...;
 
 เทคนิคการจำ
 AND = จริงและจริง = จริง นอกนั้นเท็จ เช่น T AND F = F
-OR = จริงและเท็จ = จริง นอกจากนั้นจริง T OR F = T
+OR = จริงและเท็จ = จริง นอกจากนั้นจริง T OR F = T หรือ อย่างนึงจริง ก็จริง
 
 ใช้งานร่วมกัน AND OR
 SELECT * FROM Customers
@@ -79,3 +79,33 @@ select * from users where province = "กรุงเทพมหานคร" A
 -----------------------------------------------------------------------------
 OR operator : หรือ 
 ใช้ร่วมกับ where มี 1 เงื่อนหรือมากกว่า 1 ก็ได้ เชื่อมด้วย OR
+AND OR ไว้เชื่อมเงื่อนไข
+SELECT *
+FROM Customers
+WHERE Country = 'Germany' OR Country = 'Spain';
+
+syntax :
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 OR condition2 OR condition3 ...;
+
+สามารถต่อได้มากกว่า 1 เงื่อนไขด้วย AND OR 
+SELECT * FROM Customers
+WHERE City = 'Berlin' OR CustomerName LIKE 'G%' OR Country = 'Norway';
+------------------------------------------------------------------------------
+NOT clause to return all records that DO NOT match คือ จะส่งค่ากลับเมื่อเงื่อนไขที่ระบุไม่ตรงกัน
+เช่น SELECT * FROM Customers
+WHERE NOT Country = 'Spain'; จะ return ที่ไม่ใช่ spainn 
+
+เทคนิคการจำ
+NOT = ไม่ หรือ ไม่เอาตัวที่ระบุตัวอื่นเอาหมด
+กลับผลจากจริงเป็นเท็จ
+กลับผลจากเท็จเป็นจริง
+
+syntax : 
+SELECT column1, column2, ...
+FROM table_name
+WHERE NOT condition;
+
+NOT BETWEEN Operator
+http://w3schools.com/sql/sql_not.asp
