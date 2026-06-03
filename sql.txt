@@ -1,0 +1,80 @@
+คำสั่ง Dropdatabase สำหรับลบดาต้าเบส
+syntax : Drop database dbname;
+----------------------------------
+select statment การ Query ข้อมูลด้วย select
+to select data from a database.
+syntax : select fieldname , N from tablename;
+ตัวอย่าง
+SELECT CustomerName, City FROM Customers;
+----------------------------------------------
+Distinct : คำสั่งที่ใช้ตัดข้อมูลที่ซ้ำกันในผลลัพธ์ของการค้นหาออกไป เพื่อให้แสดงเฉพาะ ค่าที่ไม่ซ้ำกัน (Unique)
+----------------------------------------------
+Count Distinct Values
+COUNT() we can count the number of unique countries.
+ตัวอย่าง select count(distinct lastname) from users 
+** นับจำนวนคอรัมที่ไม่มีค่าซ้ำ
+-------------------------------------------------------
+where :  clause is used to filter records. specific condition.
+ใช้สำหรับกำหนดเงื่อนไข เช่น userid = 2 ให้เลือกเฉพาะข้อมูลที่มีเงื่อนไข userid = 2
+ตัวอย่าง SELECT * FROM Customers
+WHERE Country = 'Mexico';
+
+syntax:SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+แบบตัวเลขก็ได้
+SELECT * FROM Customers
+WHERE CustomerID = 1;
+
+หรือใช้ operator 
+SELECT * FROM Customers
+WHERE CustomerID > 80;
+ตัวอย่าง select * from users where id > 2
+---------------------------------------------------
+ORDER BY
+คีย์เวิร์ด ORDER BY ใช้สำหรับเรียงลำดับข้อมูลในชุดผลลัพธ์ (result-set) จากน้อยไปมาก หรือจากมากไปน้อย
+select * from users order by telephone
+
+syntax 
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+
+ASC เรียงจากน้อยไปมาก
+DESC เรียงจากมากไปน้อย
+
+สามารถ sort ได้มากกว่า 1 ค่าเริ่มต้นถ้าไม่ระบุ ASC|DESC คือ น้อยไปมาก
+SELECT * FROM Customers
+ORDER BY Country, CustomerName;
+
+ใช้ควบคู่กันได้
+Combine ASC and DESC
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
+--------------------------------------------------------------------
+AND : ถ้าใช้ where สามารถมีเงื่อนไขมากกว่า 1 ด้วยการใช้ and
+AND operator is used to filter records based on more than one condition.
+AND operator displays a record if all the conditions are TRUE.
+ตัวอย่าง 
+SELECT *
+FROM Customers
+WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
+
+syntax
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3 ...;
+
+เทคนิคการจำ
+AND = จริงและจริง = จริง นอกนั้นเท็จ เช่น T AND F = F
+OR = จริงและเท็จ = จริง นอกจากนั้นจริง T OR F = T
+
+ใช้งานร่วมกัน AND OR
+SELECT * FROM Customers
+WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+
+ตัวอย่าง
+select * from users where province = "กรุงเทพมหานคร" AND firstname LIKE "สม%"
+-----------------------------------------------------------------------------
+OR operator : หรือ 
