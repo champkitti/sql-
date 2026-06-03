@@ -108,4 +108,10 @@ FROM table_name
 WHERE NOT condition;
 
 NOT BETWEEN Operator
+คำสั่ง NOT BETWEEN ใน SQL ใช้สำหรับ กรองข้อมูลที่ "ไม่อยู่ในช่วง" 
+ที่เรากำหนดไว้ โดยจะคืนค่าแถวข้อมูลทั้งหมด ยกเว้นข้อมูลที่ตกอยู่ในช่วงค่าตัวเลข วันที่ หรือตัวอักษรที่เราตีกรอบ
+SELECT *FROM ProductsWHERE Price NOT BETWEEN 100 AND 500
+
+เทียบเท่ากับเครื่องหมาย: คำสั่งนี้ทำงานเหมือนกับการใช้ OR ร่วมกับเครื่องหมายน้อยกว่าและมากกว่า 
+ตัวอย่างเช่น Price < 100 OR Price > 500
 http://w3schools.com/sql/sql_not.asp
