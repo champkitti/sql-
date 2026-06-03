@@ -132,6 +132,8 @@ WHERE NOT CustomerID > 50;
 น้อยกว่าหรือเท่ากับ
 SELECT * FROM Customers
 WHERE NOT CustomerId < 50;
-
-
+----------------------------------
+INSERT 
+ถึงตรงนี้
+https://www.w3schools.com/sql/sql_insert.asp
 
