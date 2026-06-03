@@ -1,0 +1,7 @@
+SELECT + WHERE
+ORDER BY + LIMIT
+COUNT()
+JOIN ⭐
+GROUP BY < จัดกลุ่มข้อมูลเหมือนกัน
+INNER JOIN เอาเฉพาะข้อมูลที่จับคู่กันได้
+LEFT JOIN 
