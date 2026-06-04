@@ -134,6 +134,12 @@ SELECT * FROM Customers
 WHERE NOT CustomerId < 50;
 ----------------------------------
 INSERT 
-ถึงตรงนี้
-https://www.w3schools.com/sql/sql_insert.asp
+INSERT INTO statement is used to insert new records in a table.
+เป้นการสร้างข้อมูลใหม่ใน database table นั้นๆ
+Syntax
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+--------------------------------------
+GROUP BY 
+GROUP BY statement is used to group rows
 
